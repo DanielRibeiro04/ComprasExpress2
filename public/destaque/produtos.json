@@ -1,0 +1,52 @@
+[
+  {
+    "image": "/destaque/0.png",
+    "product-title": "Alexa 5th Gen",
+    "product-description": "Design moderno e discreto; Assistente virtual integrado; Compatível com casa inteligente; Conectividade Wi-Fi e Bluetooth;",
+    "product-brand": "Samsung",
+    "product-category": "Eletrônico",
+    "product-rating": "4,5",
+    "product-rating-quant": "5.529",
+    "product-price": "R$ 449,90"
+  },
+  {
+    "image": "/destaque/1.png",
+    "product-title": "Xbox One S",
+    "product-description": "Uso exclusivo para jogos digitais; Requer conteúdo e tela compatíveis; Desempenho e velocidade de última geração em um formato compacto e totalmente digital;",
+    "product-brand": "Microsoft",
+    "product-category": "Eletrônico, Jogos",
+    "product-rating": "4,8",
+    "product-rating-quant": "12.325",
+    "product-price": "R$ 2.500,00"
+  },
+  {
+    "image": "/destaque/2.png",
+    "product-title": "Conjunto Sport",
+    "product-description": "Design moderno e discreto; leve e confortável; Próprio para atividade física;",
+    "product-brand": "Adidas",
+    "product-category": "vestuário",
+    "product-rating": "4,2",
+    "product-rating-quant": "300",
+    "product-price": "R$ 309,90"
+  },
+  {
+    "image": "/destaque/3.png",
+    "product-title": "Niina Secrets",
+    "product-description": "Niina Secrets é a linha de maquiagem e skincare de Eudora feita em parceria com a influencer e empresária Niina Secrets;",
+    "product-brand": "Eudora",
+    "product-category": "Beleza",
+    "product-rating": "4,0",
+    "product-rating-quant": "50",
+    "product-price": "R$ 109,00"
+  },
+  {
+    "image": "/destaque/4.png",
+    "product-title": "PlayStation 5 Slim",
+    "product-description": "Uso exclusivo para jogos digitais; Requer conteúdo e tela compatíveis; Desempenho e velocidade de última geração em um formato compacto e totalmente digital;",
+    "product-brand": "Sony",
+    "product-category": "Eletrônico, Jogos",
+    "product-rating": "4,8",
+    "product-rating-quant": "15.844",
+    "product-price": "R$ 2.700,00"
+  }
+]
