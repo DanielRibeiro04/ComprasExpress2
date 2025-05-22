@@ -1,18 +1,38 @@
 <div class="carousel-container">
-  <div class="carousel">
-    <div class="highlight-box">Destaques</div>
-
-    <button class="nav-btn left" (click)="prevImage()">&#10094;</button>
-    <img [src]="currentImage" class="carousel-image" />
-    <button class="nav-btn right" (click)="nextImage()">&#10095;</button>
-
-    <div class="product-info-box">
-      <h2 class="product-title">Alexa 5th Gen</h2>
-      <p class="product-description"><strong>Sobre:</strong> Design moderno e discreto; Assistente virtual integrado; Compatível com casa inteligente; Conectividade Wi-Fi e Bluetooth;</p>
-      <p class="product-brand"><strong>Marca:</strong> Sansung</p>
-      <p class="product-category"><strong>Categorias:</strong> Eletrônico</p>
-      <p class="product-rating"><strong>Avaliação:</strong> 4,0⭐ 5.529</p>
-      <p class="product-price">Valor: R$ 449,90</p>
+    <div class="carousel">
+  
+      <div class="highlight-box">Destaques</div>
+  
+      <button class="nav-btn left" (click)="prevImage()">&#10094;</button>
+  
+      <div class="carousel-slide-wrapper" [class.animating]="isAnimating" [class.slide-left]="slideDirection === 'left'" [class.slide-right]="slideDirection === 'right'">
+  
+        <img
+          [src]="allImages[currentIndex]"
+          alt="Imagem atual"
+          class="carousel-image current"
+        />
+        <img
+          [src]="allImages[(slideDirection === 'right' ? (currentIndex === 0 ? allImages.length -1 : currentIndex -1) : (currentIndex === allImages.length -1 ? 0 : currentIndex +1))]"
+          alt="Imagem antiga"
+          class="carousel-image previous"
+        />
+  
+      </div>
+  
+      <button class="nav-btn right" (click)="nextImage()">&#10095;</button>
+  
+      <!--
+      <div class="product-info-box">
+        <h2 class="product-title">Alexa 5th Gen</h2>
+        <p class="product-description"><strong>Sobre:</strong> Design moderno e discreto; Assistente virtual integrado; Compatível com casa inteligente; Conectividade Wi-Fi e Bluetooth;</p>
+        <p class="product-brand"><strong>Marca:</strong> Sansung</p>
+        <p class="product-category"><strong>Categorias:</strong> Eletrônico</p>
+        <p class="product-rating"><strong>Avaliação:</strong> 4,0⭐ 5.529</p>
+        <p class="product-price">Valor: R$ 449,90</p>
+      </div>
+      -->
     </div>
   </div>
-</div>
+  
+  

@@ -1,0 +1,35 @@
+.error-container {
+    background-color: #0c232c;
+    color: #F29353;
+    padding: 30px;
+    width: 500px;
+    height: 500px;
+    margin: 40px auto 40px auto;
+    border-radius: 8px;
+    text-align: left;
+    font-family: Georgia, serif;
+  }
+  
+  .error-container h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .highlight {
+    font-size: 36px;
+    font-weight: bold;
+    color: #F29353;
+  }
+  
+  .error-container p {
+    margin: 10px 0;
+  }
+  
+  .error-container img {
+    width: 100%;            
+    max-width: 300px;       
+    display: block;
+    margin: 20px auto 0;    
+    border-radius: 4px;
+  }
+  

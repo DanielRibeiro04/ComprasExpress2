@@ -6,11 +6,17 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './destaque-carousel.component.html',
-  styleUrl: './destaque-carousel.component.css'
+  styleUrls: ['./destaque-carousel.component.css']
 })
 export class DestaqueCarouselComponent {
   allImages: string[] = [];
   currentIndex = 0;
+
+  
+  slideDirection: 'left' | 'right' = 'right';
+
+  
+  isAnimating = false;
 
   ngOnInit() {
     for (let i = 0; i < 5; i++) {
@@ -18,24 +24,35 @@ export class DestaqueCarouselComponent {
     }
   }
 
-  get currentImage() {
-    return this.allImages[this.currentIndex];
-  }
-
   prevImage() {
-    if (this.currentIndex > 0) {
-      this.currentIndex--;
-    } else {
-      this.currentIndex = this.allImages.length - 1;
-    }
+    if (this.isAnimating) return; 
+
+    this.slideDirection = 'left';
+    this.isAnimating = true;
+
+    setTimeout(() => {
+      if (this.currentIndex > 0) {
+        this.currentIndex--;
+      } else {
+        this.currentIndex = this.allImages.length - 1;
+      }
+      this.isAnimating = false;
+    }, 800); 
   }
 
   nextImage() {
-    if (this.currentIndex < this.allImages.length - 1) {
-      this.currentIndex++;
-    } else {
-      this.currentIndex = 0;
-    }
+    if (this.isAnimating) return; 
+
+    this.slideDirection = 'right';
+    this.isAnimating = true;
+
+    setTimeout(() => {
+      if (this.currentIndex < this.allImages.length - 1) {
+        this.currentIndex++;
+      } else {
+        this.currentIndex = 0;
+      }
+      this.isAnimating = false;
+    }, 800);
   }
 }
-

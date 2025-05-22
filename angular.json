@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "projeto-teste": {
+    "cadastro-teste": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/projeto-teste",
+            "outputPath": "dist/cadastro-teste",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -29,7 +29,12 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -59,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "projeto-teste:build:production"
+              "buildTarget": "cadastro-teste:build:production"
             },
             "development": {
-              "buildTarget": "projeto-teste:build:development"
+              "buildTarget": "cadastro-teste:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,6 +84,8 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
+               "src/assets",
+                "src/favicon.ico",
               {
                 "glob": "**/*",
                 "input": "public"
@@ -94,6 +101,6 @@
     }
   },
   "cli": {
-    "analytics": "3bb315ad-2d56-4444-9823-9fa3d2f4a50a"
+    "analytics": "acf7d53d-d87e-47a2-b7b9-e03cd46fd8d2"
   }
 }

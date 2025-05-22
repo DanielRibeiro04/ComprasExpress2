@@ -1,6 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
 main {
   background-color: #FF914D;
-  font-family: sans-serif;
   padding: 0;
 }
 
@@ -10,26 +20,30 @@ main {
 }
 
 .top-bar {
-  background-color: #0C232C;
+  background-color: #15202A;
   color: #ffffff;
   padding: 10px 0;
 }
 
 .top-bar-inner {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
+  padding: 0 2%;
+  flex-wrap: nowrap;
 }
 
 .top-left {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .logo {
   height: 60px;
+  pointer-events: none;
 }
 
 .brand-name {
@@ -38,9 +52,9 @@ main {
 }
 
 .search-bar-wrapper {
+  flex-grow: 1;
   display: flex;
   justify-content: center;
-  margin: 10px 0;
 }
 
 .search-bar {
@@ -49,9 +63,9 @@ main {
   background-color: white;
   border-radius: 20px;
   padding: 5px 10px;
-  max-width: 875px;
-  margin-left: 295px;
-  width: 100%;
+  width: 810px;
+  max-width: 100%;
+  margin-left: 100px;
 }
 
 .search-bar input {
@@ -77,6 +91,7 @@ main {
   display: flex;
   align-items: center;
   gap: 15px;
+  flex-shrink: 0;
 }
 
 .link {
@@ -102,7 +117,6 @@ main {
   padding: 10px 2%;
   overflow-x: auto;
   border-top: 1px solid #ffffff20;
-
 }
 
 .nav-link {
